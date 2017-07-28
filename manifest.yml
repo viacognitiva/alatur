@@ -1,0 +1,9 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: chatbotvbo
+  host: chatbotvbo${random-word}
+  disk_quota: 512M
+
