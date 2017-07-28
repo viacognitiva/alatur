@@ -143,7 +143,7 @@ function displayMessage(text, user) {
 
          var divHora = document.createElement('div');
          var textHora= document.createTextNode(new Date().getDate()+"/"+(new Date().getMonth()+1)+"  "+new Date().getHours()+":"+addZero(new Date().getMinutes()));
-         divHora.style='text-align:right;color:#a4a4a4;font-size:12px;padding-right:50px';
+         divHora.style='text-align:left;color:#a4a4a4;font-size:12px;padding-right:50px';
          divHora.appendChild(textHora);
 
          var user = document.createTextNode(' ');
