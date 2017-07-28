@@ -135,6 +135,20 @@ function newEvent(event) {
     }
 }
 
+function sendMessage() {
+    if($("#chatInput").val()==''){
+        $("#chatInput").css("border-color", "red");
+       return;
+    }
+    $("#chatInput").css("border-color", "#d2d6de");
+    var message = document.getElementById('chatInput');
+    var texto = message.value;
+    texto = texto.replace(/(\r\n|\n|\r)/gm, "");
+    displayMessage(texto, 'user');
+    message.value = '';
+    userMessage(texto);
+}
+
 function displayMessage(text, user) {
     var chat = document.getElementById('chat_box');
     if (user == "user") {
