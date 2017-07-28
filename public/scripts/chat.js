@@ -82,10 +82,11 @@ function userMessage(message) {
                for (var txt in text) {
                     displayMessage(text[txt], watson);
                  }
+               var chat = document.getElementById('chat_box');
+               chat.scrollTop = chat.scrollHeight;
 
          // }
-          var chat = document.getElementById('chat_box');
-          chat.scrollTop = chat.scrollHeight;
+
 
         }
         else {
@@ -200,7 +201,7 @@ function displayMessage(text, user) {
          textoFormatado = textoFormatado.replace(/<[^>]*>/g, "");
                 // console.log('Texto Formatado '+textoFormatado);
 
-        loadSound(textoFormatado) ;
+        //loadSound(textoFormatado) ;
 
     }
 }
