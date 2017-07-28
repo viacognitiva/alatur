@@ -3,7 +3,7 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: chatbotvbo
-  host: chatbotvbo${random-word}
+  name: showlivre
+  host: showlivre${random-word}
   disk_quota: 512M
 

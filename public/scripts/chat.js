@@ -68,7 +68,7 @@ function userMessage(message) {
             context = response.context; // Store the context for next round of questions
             console.log("Got response from Watson: ", JSON.stringify(response));
 
-          if(text.toString().length==0){
+         /* if(text.toString().length==0){
              callCloudantById( function ( value ) {
                  console.log( 'response'+response );
                  text = value;
@@ -78,12 +78,12 @@ function userMessage(message) {
 
                },response.intents[0].intent );
 
-          }else {
+          }else {*/
                for (var txt in text) {
                     displayMessage(text[txt], watson);
                  }
 
-          }
+         // }
           var chat = document.getElementById('chat_box');
           chat.scrollTop = chat.scrollHeight;
 
@@ -102,11 +102,11 @@ function userMessage(message) {
 }
 
 
-function callCloudantById( callback ,id){
+/*function callCloudantById( callback ,id){
     $.getJSON( "/api/cloudant/"+id, function( data ) {
       callback(data.resposta);
     });
-}
+}*/
 
 function newEvent(event) {
     // Only check for a return/enter press - Event 13
