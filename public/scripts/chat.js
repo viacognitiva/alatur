@@ -156,7 +156,7 @@ function displayMessage(text, user) {
          var div0 = document.createElement('div');
 
          var divHora = document.createElement('div');
-         var textHora= document.createTextNode(new Date().getDate()+"/"+(new Date().getMonth()+1)+"  "+new Date().getHours()+":"+addZero(new Date().getMinutes()));
+         var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
          divHora.style='text-align:left;color:#a4a4a4;font-size:12px;padding-right:50px';
          divHora.appendChild(textHora);
 
@@ -184,7 +184,7 @@ function displayMessage(text, user) {
     else {
         var div = document.createElement('div');
         var divHora = document.createElement('div');
-        var textHora= document.createTextNode(new Date().getDate()+"/"+(new Date().getMonth()+1)+"  "+new Date().getHours()+":"+addZero(new Date().getMinutes()));
+        var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
         divHora.style='text-align:right;color:#a4a4a4;font-size:12px';
         divHora.appendChild(textHora);
 
