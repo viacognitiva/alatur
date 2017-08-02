@@ -174,7 +174,7 @@ function buildContextObject(req, callback) {
         , context: {}
     };
 
-    
+
     if (req.body.context) {
         context = req.body.context;
         params.context = context;
