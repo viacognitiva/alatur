@@ -1,7 +1,7 @@
   body {
     background-image: url(../images/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
   }
   html, body, #wrapper {
     margin: 0;
@@ -68,6 +68,14 @@
   .direct-chat-msg{
     margin-bottom:0;
   }
+  //.direct-chat-primary .right > .direct-chat-text{
+  //   background: #7e7e7e;
+  //    border-color: #7e7e7e;
+  //}
+  //.direct-chat-primary .right > .direct-chat-text::after,
+  //.direct-chat-primary .right > .direct-chat-text::before{
+  // border-left-color: #7e7e7e;
+  //}
   @media(max-width: 1000px) {
     .content { width: 90%; }
   }
