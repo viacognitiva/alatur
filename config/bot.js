@@ -25,11 +25,12 @@ var conversationWorkspace, conversation;
         url: "https://gateway.watsonplatform.net/conversation/api"
         , username: "00d3a0e9-0c49-4926-ac20-f196408ed50c"
         , password: "766vkevorbt4"
-        , version_date: '2017-04-10'
+        , version_date: '2017-05-26'
         , version: 'v1'
     });
     // check if the workspace ID is specified in the environment
-    conversationWorkspace = "60c11d0b-031c-485c-9488-5225b84e758a";
+    conversationWorkspace = '7734e259-3632-47a1-b12c-f4d9d4f1456c';
+
     // if not, look it up by name or create one
 // Allow clients to interact
 
@@ -184,7 +185,7 @@ function buildContextObject(req, callback) {
     }
     // Set parameters for payload to Watson Conversation
     params.input = {
-        text: message // User defined text to be sent to service
+        'text': message // User defined text to be sent to service
     };
     // This is the first message, add the user's name and get their healthcare object
 //    if ((!message || message === '') && !context) {
