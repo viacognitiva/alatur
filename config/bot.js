@@ -29,7 +29,7 @@ var conversationWorkspace, conversation;
         , version: 'v1'
     });
     // check if the workspace ID is specified in the environment
-    conversationWorkspace = '7734e259-3632-47a1-b12c-f4d9d4f1456c';
+    conversationWorkspace = '60c11d0b-031c-485c-9488-5225b84e758a';
 
     // if not, look it up by name or create one
 // Allow clients to interact
