@@ -28,6 +28,7 @@ var conversationWorkspace, conversation;
         , version_date: '2017-05-26'
         , version: 'v1'
     });
+
     // check if the workspace ID is specified in the environment
     conversationWorkspace = '60c11d0b-031c-485c-9488-5225b84e758a';
 
