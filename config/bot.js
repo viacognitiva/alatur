@@ -40,7 +40,7 @@ var chatbot = {
 //        var owner = req.user.username;
         buildContextObject(req, function (err, params) {
                 if (err) {
-                    console.log("Error in building the parameters object: ", err);
+                    console.log("Error in building the parameters object : ", err);
                     return callback(err);
                 }
                 if (params.message) {
