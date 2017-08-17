@@ -13,6 +13,7 @@
 var watson = require('watson-developer-cloud');
 var CONVERSATION_NAME = "Conversation-Demo"; // conversation name goes here.
 var fs = require('fs');
+var request = require('request');
 // load local VCAP configuration
 var appEnv = null;
 var conversationWorkspace, conversation;
@@ -70,20 +71,62 @@ var chatbot = {
                                 
                             var conv = data.context.conversation_id;
                             console.log("Got response from Ana: ", JSON.stringify(data));
-//                            if (data.context.system.dialog_turn_counter > 1) {
-//                                chatLogs(owner, conv, data, () => {
-//                                    return callback(null, data);
-//                                });
-//                            }
-//                            else {
-                                return callback(null, data);
-//                            }
+                            insertLogs(req,params,data)
+                            return callback(null, data);
+
                         }
                     });
             }
         });
 }
 };
+
+
+
+function insertLogs(req,params,data){
+    //data
+    var USER_DATA = {
+              "conversation_id": data.context.conversation_id,
+              "messageWatson": data.output.text[0],
+              "messageUser": data.input.text,
+              "data":new Date().toLocaleDateString()+" "+new Date().toLocaleTimeString(),
+              "aplicacao":"showlivre"
+              }
+
+    if (data.intents.length > 0) {
+        USER_DATA.intencao = data.intents[0].intent;
+       console.log('Detected intent: #' + data.intents[0].intent);
+     }
+
+    // var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+    var fullUrl = req.protocol + '://' + 'abralesubgeneric-inebriety.mybluemix.net'
+
+    console.log(fullUrl+'/api/cloudant');
+          var options = {
+              method: 'POST',
+              uri: fullUrl+'/api/cloudant',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              json: USER_DATA
+
+          };
+         //salvar logs em banco
+         request(options, callbackLog);
+}
+
+
+function callbackLog(error, response, body) {
+    if (!error) {
+        var info = JSON.parse(JSON.stringify(body));
+        console.log(info);
+    }
+    else {
+        console.log('Error - showlivre - insertLogs : '+ error);
+    }
+}
+
+
 // ===============================================
 // LOG MANAGEMENT FOR USER INPUT FOR ANA =========
 // ===============================================
