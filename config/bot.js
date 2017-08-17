@@ -89,7 +89,6 @@ function insertLogs(req,params,data){
               "conversation_id": data.context.conversation_id,
               "messageWatson": data.output.text[0],
               "messageUser": data.input.text,
-              "data":new Date().toLocaleDateString()+" "+new Date().toLocaleTimeString(),
               "aplicacao":"showlivre"
               }
 
