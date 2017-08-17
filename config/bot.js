@@ -99,7 +99,7 @@ function insertLogs(req,params,data){
      }
 
     // var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-    var fullUrl = req.protocol + '://' + 'abralesubgeneric-inebriety.mybluemix.net'
+    var fullUrl = req.protocol + '://' + 'analistic-logs-conversationpediculicide-purificator.mybluemix.net'
 
     console.log(fullUrl+'/api/cloudant');
           var options = {

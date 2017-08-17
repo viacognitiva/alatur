@@ -33,7 +33,7 @@ var methodOverride = require('method-override');
 var errorHandler = require('errorhandler');
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -91,24 +91,6 @@ function processChatMessage(req, res) {
             res.status(err.code || 500).json(err);
         }
         else {
-//            Logs.find({
-//                selector: {
-//                    'conversation': data.context.conversation_id
-//                }
-//            }, function (err, result) {
-//                if (err) {
-//                    console.log("Cannot find log for conversation id of ", data.context.conversation_id);
-//                }
-//                else if (result.docs.length > 0) {
-//                    var doc = result.docs[0];
-//                    console.log("Sending log updates to dashboard");
-                    //console.log("doc: ", doc);
-//                    io.sockets.emit('logDoc', doc);
-//                }
-//                else {
-//                    console.log("No log file found.");
-//                }
-//            });
             var context = data.context;
             res.status(200).json(data);
         }
