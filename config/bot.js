@@ -101,10 +101,10 @@ function insertLogs(req,params,data){
     // var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     var fullUrl = req.protocol + '://' + 'analistic-logs-conversationpediculicide-purificator.mybluemix.net'
 
-    console.log(fullUrl+'/api/cloudant');
+    console.log(fullUrl+'/api/logs');
           var options = {
               method: 'POST',
-              uri: fullUrl+'/api/cloudant',
+              uri: fullUrl+'/api/logs',
               headers: {
                   'Content-Type': 'application/json'
               },
