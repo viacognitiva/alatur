@@ -3,7 +3,7 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: showlivre
-  host: showlivre${random-word}
+  name: alatur
+  host: alatur${random-word}
   disk_quota: 512M
 
