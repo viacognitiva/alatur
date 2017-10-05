@@ -24,9 +24,9 @@ var conversationWorkspace, conversation;
 // Create the service wrapper
     conversation = watson.conversation({
         url: "https://gateway.watsonplatform.net/conversation/api"
-        , username: "d1df6c26-bedc-4965-9a79-e1339c0cff80"
-        , password: "3lUqPxo4kNm2"
-        , version_date: '2017-05-26'
+        , username: "24bdc8b1-6fe3-4012-bc68-db2279ed3c60"
+        , password: "DZzS6xBJeI78"
+        , version_date: '2017-10-05'
         , version: 'v1'
     });
 
