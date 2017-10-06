@@ -157,7 +157,7 @@ function displayMessage(text, user) {
 
          var divHora = document.createElement('div');
          var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
-         divHora.style='text-align:left;color:#cfcfcf;font-size:12px;padding-right:50px';
+         divHora.style='text-align:left;color:#adadad;font-size:12px;padding-right:50px';
          divHora.appendChild(textHora);
 
          var user = document.createTextNode(' ');
@@ -185,14 +185,14 @@ function displayMessage(text, user) {
         var div = document.createElement('div');
         var divHora = document.createElement('div');
         var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
-        divHora.style='text-align:right;color:#cfcfcf;font-size:12px';
+        divHora.style='text-align:right;color:#adadad;font-size:12px';
         divHora.appendChild(textHora);
 
         var user = document.createTextNode(' ');
         var userBox = document.createElement('span');
         user = document.createElement('img');
         user.className = 'direct-chat-img';
-        user.src = '/images/logo_fb.jpg';
+        user.src = '/images/logo_chat.png';
         div.className = 'direct-chat-text';
 
         userBox.appendChild(user);
