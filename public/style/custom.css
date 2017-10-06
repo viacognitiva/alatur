@@ -10,7 +10,7 @@
     background-color:rgba(0,0,0,0.7);
   }
   .box-header.with-border{
-    border-bottom: 1px solid #CB2027;
+    border-bottom: 3px solid #CB2027;
   }
   .box-header .box-title{
       color:#3BBAB5;
@@ -20,6 +20,9 @@
   }
   .box{
       background-color: #EEEEEE;
+  }
+  .box-footer{
+      padding: 5px;
   }
   #wrapper {
     background-color: #ecf0f1;
